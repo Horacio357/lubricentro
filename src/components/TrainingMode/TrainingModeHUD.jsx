@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import st from './TrainingModeHUD.module.css';
+
+const DISMISS_STORAGE_KEY = 'rudy_training_launcher_dismissed';
 
 const TrainingModeHUD = ({
 	isActive,
@@ -12,6 +14,18 @@ const TrainingModeHUD = ({
 	onJumpTo,
 	buttonLabel = 'Modo Entrenamiento',
 }) => {
+	const [isDismissed, setIsDismissed] = useState(false);
+
+	useEffect(() => {
+		try {
+			if (window.sessionStorage.getItem(DISMISS_STORAGE_KEY) === 'true') {
+				setIsDismissed(true);
+			}
+		} catch {
+			// ignorar si sessionStorage no está disponible
+		}
+	}, []);
+
 	useEffect(() => {
 		if (!isActive) return;
 
@@ -29,17 +43,39 @@ const TrainingModeHUD = ({
 		return () => window.removeEventListener('keydown', handleKeyDown);
 	}, [isActive, onExit, onNext, onPrev]);
 
+	const handleDismissLauncher = (e) => {
+		e.stopPropagation();
+		setIsDismissed(true);
+		try {
+			window.sessionStorage.setItem(DISMISS_STORAGE_KEY, 'true');
+		} catch {
+			// ignorar
+		}
+	};
+
 	if (!isActive) {
+		if (isDismissed) return null;
 		return (
-			<button
-				type="button"
-				className={st.launcherBtn}
-				onClick={onStart}
-				title="Iniciar guía interactiva del sistema"
-			>
-				<span className={st.launcherDot} />
-				<span>{buttonLabel}</span>
-			</button>
+			<div className={st.launcherGroup}>
+				<button
+					type="button"
+					className={st.launcherBtn}
+					onClick={onStart}
+					title="Iniciar guía interactiva del sistema"
+				>
+					<span className={st.launcherDot} />
+					<span>{buttonLabel}</span>
+				</button>
+				<button
+					type="button"
+					className={st.launcherCloseBtn}
+					onClick={handleDismissLauncher}
+					title="Ocultar botón de Modo Entrenamiento"
+					aria-label="Ocultar botón de Modo Entrenamiento"
+				>
+					✕
+				</button>
+			</div>
 		);
 	}
 
