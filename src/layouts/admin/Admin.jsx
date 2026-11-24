@@ -16,6 +16,8 @@ import ClientsBasePanel from './components/ClientsBasePanel/ClientsBasePanel';
 import CatalogPanel from './components/CatalogPanel/CatalogPanel';
 import StaffManagementPanel from './components/StaffManagementPanel/StaffManagementPanel';
 import { PERMISSIONS, ROLE_LABELS } from '@/utils/permissions';
+import TrainingModeHUD from '@/components/TrainingMode/TrainingModeHUD';
+import { getAdminTrainingSteps } from '@/utils/trainingSteps';
 
 const Admin = ({ staffProfile, can }) => {
 	const {
@@ -45,6 +47,13 @@ const Admin = ({ staffProfile, can }) => {
 		availablePanels[0] || PANEL.SEARCH_ACCOUNT
 	);
 	const [signingOut, setSigningOut] = useState(false);
+	const [trainingActive, setTrainingActive] = useState(false);
+	const [trainingStep, setTrainingStep] = useState(0);
+
+	const trainingSteps = useMemo(
+		() => getAdminTrainingSteps(availablePanels),
+		[availablePanels]
+	);
 
 	useEffect(() => {
 		if (availablePanels.length > 0 && !availablePanels.includes(panel)) {
@@ -55,6 +64,15 @@ const Admin = ({ staffProfile, can }) => {
 	const updatePanel = (value) => {
 		resetStates();
 		setPanel(value);
+	};
+
+	const goToTrainingStep = (nextIndex) => {
+		if (nextIndex < 0 || nextIndex >= trainingSteps.length) return;
+		setTrainingStep(nextIndex);
+		const targetPanel = trainingSteps[nextIndex]?.panel;
+		if (targetPanel && availablePanels.includes(targetPanel)) {
+			updatePanel(targetPanel);
+		}
 	};
 
 	const handleSignOut = async () => {
@@ -76,6 +94,19 @@ const Admin = ({ staffProfile, can }) => {
 
 	return (
 		<div className={classes.container}>
+			<TrainingModeHUD
+				isActive={trainingActive}
+				steps={trainingSteps}
+				currentIndex={trainingStep}
+				onStart={() => {
+					setTrainingActive(true);
+					goToTrainingStep(0);
+				}}
+				onExit={() => setTrainingActive(false)}
+				onNext={() => goToTrainingStep(trainingStep + 1)}
+				onPrev={() => goToTrainingStep(trainingStep - 1)}
+				onJumpTo={goToTrainingStep}
+			/>
 			<img src="/logo_negro.webp" alt="RudyServices" className={classes.logo} />
 			<div className={classes.headerMeta}>
 				<h2 className={classes.title}>Panel de Administración</h2>

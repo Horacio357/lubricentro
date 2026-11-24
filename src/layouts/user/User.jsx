@@ -8,10 +8,19 @@ import AddServiceUI from './components/AddServiceUI/AddServiceUI';
 import Footer from './components/Footer/Footer';
 import MaintenanceTrafficLight from './components/MaintenanceTrafficLight/MaintenanceTrafficLight';
 import { getUnitIdentifier } from '@/utils/serviceTemplates';
+import TrainingModeHUD from '@/components/TrainingMode/TrainingModeHUD';
+import { getVehicleTrainingSteps } from '@/utils/trainingSteps';
 
 const User = ({ data, privateData, onChange, adminState, staffProfile, can }) => {
 	const isAuthenticatedStaff = adminState === ADMIN_STATES.ADMIN;
 	const hasPerm = (perm) => isAuthenticatedStaff && can && can(perm);
+	const [trainingActive, setTrainingActive] = React.useState(false);
+	const [trainingStep, setTrainingStep] = React.useState(0);
+
+	const trainingSteps = React.useMemo(
+		() => getVehicleTrainingSteps({ isStaff: isAuthenticatedStaff }),
+		[isAuthenticatedStaff]
+	);
 
 	const findPrivateService = (id) => {
 		if (!privateData || !Array.isArray(privateData.services)) return null;
@@ -20,6 +29,21 @@ const User = ({ data, privateData, onChange, adminState, staffProfile, can }) =>
 
 	return (
 		<div className={st.container}>
+			<TrainingModeHUD
+				isActive={trainingActive}
+				steps={trainingSteps}
+				currentIndex={trainingStep}
+				onStart={() => {
+					setTrainingStep(0);
+					setTrainingActive(true);
+				}}
+				onExit={() => setTrainingActive(false)}
+				onNext={() =>
+					setTrainingStep((i) => Math.min(i + 1, trainingSteps.length - 1))
+				}
+				onPrev={() => setTrainingStep((i) => Math.max(i - 1, 0))}
+				onJumpTo={(idx) => setTrainingStep(idx)}
+			/>
 			<div className={st.contentGrid}>
 				<div className={st.sidebarCol}>
 					<div className={st.imageContainer}>
