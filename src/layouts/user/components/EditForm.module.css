@@ -1,0 +1,108 @@
+.editActions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.editToggleBtn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--mainColor, #FCBD00);
+  background-color: transparent;
+  color: var(--mainColor, #FCBD00);
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.editToggleBtn:hover {
+  background-color: var(--mainColor, #FCBD00);
+  color: #000;
+}
+
+.editToggleBtn:active {
+  transform: scale(0.98);
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fieldLabel {
+  font-size: 0.78em;
+  color: var(--textSecondary, #b3b3b3);
+}
+
+.input,
+.textarea,
+.select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 2px solid var(--surfaceBorder, #363636);
+  background-color: var(--surfaceElevated, #2e2e2e);
+  color: #fff;
+  font-size: 0.9em;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.textarea {
+  min-height: 75px;
+  resize: vertical;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: var(--mainColor, #FCBD00);
+}
+
+.saveBtn {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background-color: var(--mainColor, #FCBD00);
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.15s ease;
+}
+
+.saveBtn:hover:not(:disabled) {
+  filter: brightness(0.92);
+}
+
+.saveBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancelBtn {
+  flex: 1;
+  border: 1px solid var(--surfaceBorder, #363636);
+  border-radius: 10px;
+  padding: 10px 14px;
+  background-color: var(--surfaceElevated, #2e2e2e);
+  color: #fff;
+  cursor: pointer;
+}
+
+.errorText {
+  color: #ff8a8a;
+  font-size: 0.85em;
+  margin: 0;
+}

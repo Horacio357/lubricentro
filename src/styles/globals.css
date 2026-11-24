@@ -1,0 +1,42 @@
+:root {
+  --mainColor: #FCBD00;
+  --mainColorHover: #e5ac00;
+  --grey: #626261;
+  --danger: rgb(206, 38, 38);
+  --success: rgb(10, 185, 10);
+
+  /* Superficies y bordes del tema oscuro */
+  --bgDark: #000000;
+  --surface: #1d1d1d;
+  --surfaceElevated: #2e2e2e;
+  --surfaceBorder: #363636;
+  --textPrimary: #ffffff;
+  --textSecondary: #b3b3b3;
+
+  /* Paleta pastel para gráficos sobre fondo oscuro */
+  --pastelAmber: #FFE082;
+  --pastelMint: #A8E6CF;
+  --pastelCoral: #FFAAA5;
+  --pastelLavender: #C3B1E1;
+  --pastelSky: #A0D2EB;
+  --pastelPeach: #FFD3B6;
+
+  background-color: var(--bgDark);
+  color-scheme: dark;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: var(--textPrimary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

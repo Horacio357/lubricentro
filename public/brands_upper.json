@@ -1,0 +1,318 @@
+[
+  {
+    "id": 1,
+    "brand_name": "ABARTH"
+  },
+  {
+    "id": 2,
+    "brand_name": "ALFA ROMEO"
+  },
+  {
+    "id": 3,
+    "brand_name": "ARO"
+  },
+  {
+    "id": 4,
+    "brand_name": "ASIA"
+  },
+  {
+    "id": 5,
+    "brand_name": "ASIA MOTORS"
+  },
+  {
+    "id": 6,
+    "brand_name": "ASTON MARTIN"
+  },
+  {
+    "id": 7,
+    "brand_name": "AUDI"
+  },
+  {
+    "id": 8,
+    "brand_name": "AUSTIN"
+  },
+  {
+    "id": 9,
+    "brand_name": "AUVERLAND"
+  },
+  {
+    "id": 10,
+    "brand_name": "BENTLEY"
+  },
+  {
+    "id": 11,
+    "brand_name": "BERTONE"
+  },
+  {
+    "id": 12,
+    "brand_name": "BMW"
+  },
+  {
+    "id": 13,
+    "brand_name": "CADILLAC"
+  },
+  {
+    "id": 14,
+    "brand_name": "CHEVROLET"
+  },
+  {
+    "id": 15,
+    "brand_name": "CHRYSLER"
+  },
+  {
+    "id": 16,
+    "brand_name": "CITROEN"
+  },
+  {
+    "id": 17,
+    "brand_name": "CORVETTE"
+  },
+  {
+    "id": 18,
+    "brand_name": "DACIA"
+  },
+  {
+    "id": 19,
+    "brand_name": "DAEWOO"
+  },
+  {
+    "id": 20,
+    "brand_name": "DAF"
+  },
+  {
+    "id": 21,
+    "brand_name": "DAIHATSU"
+  },
+  {
+    "id": 22,
+    "brand_name": "DAIMLER"
+  },
+  {
+    "id": 23,
+    "brand_name": "DODGE"
+  },
+  {
+    "id": 24,
+    "brand_name": "FERRARI"
+  },
+  {
+    "id": 25,
+    "brand_name": "FIAT"
+  },
+  {
+    "id": 26,
+    "brand_name": "FORD"
+  },
+  {
+    "id": 27,
+    "brand_name": "GALLOPER"
+  },
+  {
+    "id": 28,
+    "brand_name": "GMC"
+  },
+  {
+    "id": 29,
+    "brand_name": "HONDA"
+  },
+  {
+    "id": 30,
+    "brand_name": "HUMMER"
+  },
+  {
+    "id": 31,
+    "brand_name": "HYUNDAI"
+  },
+  {
+    "id": 32,
+    "brand_name": "INFINITI"
+  },
+  {
+    "id": 33,
+    "brand_name": "INNOCENTI"
+  },
+  {
+    "id": 34,
+    "brand_name": "ISUZU"
+  },
+  {
+    "id": 35,
+    "brand_name": "IVECO"
+  },
+  {
+    "id": 36,
+    "brand_name": "IVECO-PEGASO"
+  },
+  {
+    "id": 37,
+    "brand_name": "JAGUAR"
+  },
+  {
+    "id": 38,
+    "brand_name": "JEEP"
+  },
+  {
+    "id": 39,
+    "brand_name": "KIA"
+  },
+  {
+    "id": 40,
+    "brand_name": "LADA"
+  },
+  {
+    "id": 41,
+    "brand_name": "LAMBORGHINI"
+  },
+  {
+    "id": 42,
+    "brand_name": "LANCIA"
+  },
+  {
+    "id": 43,
+    "brand_name": "LAND-ROVER"
+  },
+  {
+    "id": 44,
+    "brand_name": "LDV"
+  },
+  {
+    "id": 45,
+    "brand_name": "LEXUS"
+  },
+  {
+    "id": 46,
+    "brand_name": "LOTUS"
+  },
+  {
+    "id": 47,
+    "brand_name": "MAHINDRA"
+  },
+  {
+    "id": 48,
+    "brand_name": "MASERATI"
+  },
+  {
+    "id": 49,
+    "brand_name": "MAYBACH"
+  },
+  {
+    "id": 50,
+    "brand_name": "MAZDA"
+  },
+  {
+    "id": 51,
+    "brand_name": "MERCEDES-BENZ"
+  },
+  {
+    "id": 52,
+    "brand_name": "MG"
+  },
+  {
+    "id": 53,
+    "brand_name": "MINI"
+  },
+  {
+    "id": 54,
+    "brand_name": "MITSUBISHI"
+  },
+  {
+    "id": 55,
+    "brand_name": "MORGAN"
+  },
+  {
+    "id": 56,
+    "brand_name": "NISSAN"
+  },
+  {
+    "id": 57,
+    "brand_name": "OPEL"
+  },
+  {
+    "id": 58,
+    "brand_name": "PEUGEOT"
+  },
+  {
+    "id": 59,
+    "brand_name": "PONTIAC"
+  },
+  {
+    "id": 60,
+    "brand_name": "PORSCHE"
+  },
+  {
+    "id": 61,
+    "brand_name": "RENAULT"
+  },
+  {
+    "id": 62,
+    "brand_name": "ROLLS-ROYCE"
+  },
+  {
+    "id": 63,
+    "brand_name": "ROVER"
+  },
+  {
+    "id": 64,
+    "brand_name": "SAAB"
+  },
+  {
+    "id": 65,
+    "brand_name": "SANTANA"
+  },
+  {
+    "id": 66,
+    "brand_name": "SEAT"
+  },
+  {
+    "id": 67,
+    "brand_name": "SKODA"
+  },
+  {
+    "id": 68,
+    "brand_name": "SMART"
+  },
+  {
+    "id": 69,
+    "brand_name": "SSANGYONG"
+  },
+  {
+    "id": 70,
+    "brand_name": "SUBARU"
+  },
+  {
+    "id": 71,
+    "brand_name": "SUZUKI"
+  },
+  {
+    "id": 72,
+    "brand_name": "TALBOT"
+  },
+  {
+    "id": 73,
+    "brand_name": "TATA"
+  },
+  {
+    "id": 74,
+    "brand_name": "TOYOTA"
+  },
+  {
+    "id": 75,
+    "brand_name": "UMM"
+  },
+  {
+    "id": 76,
+    "brand_name": "VAZ"
+  },
+  {
+    "id": 77,
+    "brand_name": "VOLKSWAGEN"
+  },
+  {
+    "id": 78,
+    "brand_name": "VOLVO"
+  },
+  {
+    "id": 79,
+    "brand_name": "WARTBURG"
+  }
+]

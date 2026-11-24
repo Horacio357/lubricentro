@@ -1,0 +1,12 @@
+.title{
+    margin: 0;
+    padding-bottom: 20px;
+}
+.details{
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0.9em;
+    flex-grow: 1;
+    overflow: hidden;
+}

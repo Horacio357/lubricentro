@@ -1,0 +1,255 @@
+.container {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--surface, #1d1d1d);
+  border: 1px solid var(--surfaceBorder, #363636);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.1em;
+  color: var(--textPrimary, #fff);
+}
+
+.cardSubtitle {
+  margin: 0;
+  font-size: 0.85em;
+  color: var(--textSecondary, #b3b3b3);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input,
+.select {
+  box-sizing: border-box;
+  padding: 10px 12px;
+  outline: none;
+  background-color: var(--surfaceElevated, #2e2e2e);
+  border-radius: 10px;
+  min-height: 40px;
+  width: 100%;
+  border: 2px solid rgb(37, 37, 37);
+  color: #fff;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.input:focus,
+.select:focus {
+  border-color: var(--mainColor, #FCBD00);
+}
+
+.label {
+  font-size: 0.85em;
+  color: var(--textSecondary, #b3b3b3);
+}
+
+.permissionsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--surfaceBorder, #363636);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.permissionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85em;
+  color: var(--textPrimary, #fff);
+  cursor: pointer;
+}
+
+.checkboxLabel input {
+  accent-color: var(--mainColor, #FCBD00);
+}
+
+.primaryButton {
+  border: none;
+  border-radius: 12px;
+  padding: 11px 16px;
+  background-color: var(--mainColor, #FCBD00);
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.15s ease;
+}
+
+.primaryButton:hover:not(:disabled) {
+  filter: brightness(0.92);
+}
+
+.primaryButton:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.primaryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.staffList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.staffItem {
+  background-color: rgba(0, 0, 0, 0.28);
+  border: 1px solid var(--surfaceBorder, #363636);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.staffInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.staffHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.roleBadge {
+  font-size: 0.75em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background-color: rgba(252, 189, 0, 0.18);
+  color: var(--mainColor, #FCBD00);
+}
+
+.inactiveBadge {
+  font-size: 0.75em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background-color: rgba(206, 38, 38, 0.2);
+  color: #ff8a8a;
+}
+
+.staffEmail {
+  font-size: 0.82em;
+  color: var(--textSecondary, #b3b3b3);
+  word-break: break-all;
+}
+
+.staffActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.secondaryBtn,
+.dangerBtn {
+  border-radius: 9px;
+  padding: 7px 12px;
+  font-size: 0.82em;
+  cursor: pointer;
+  border: 1px solid var(--surfaceBorder, #363636);
+  background-color: var(--surfaceElevated, #2e2e2e);
+  color: #fff;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.secondaryBtn:hover {
+  border-color: var(--mainColor, #FCBD00);
+}
+
+.dangerBtn {
+  border-color: rgba(206, 38, 38, 0.5);
+  color: #ff9c9c;
+}
+
+.dangerBtn:hover {
+  background-color: rgba(206, 38, 38, 0.2);
+}
+
+.editModal {
+  margin-top: 8px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--mainColor, #FCBD00);
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.editTitle {
+  margin: 0;
+  font-size: 0.95em;
+  color: var(--mainColor, #FCBD00);
+}
+
+.errorMsg {
+  color: #ff8a8a;
+  font-size: 0.88em;
+  margin: 0;
+}
+
+.successMsg {
+  color: #7ee87e;
+  font-size: 0.88em;
+  margin: 0;
+}
+
+.muted {
+  color: var(--textSecondary, #b3b3b3);
+  font-size: 0.9em;
+}
+
+@media (min-width: 640px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .staffItem {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1.15fr;
+    align-items: start;
+  }
+}

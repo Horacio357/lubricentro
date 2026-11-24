@@ -1,0 +1,91 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function staffDoc() {
+      return get(/databases/$(database)/documents/staff_users/$(request.auth.uid)).data;
+    }
+
+    function isActiveStaff() {
+      return isSignedIn()
+        && exists(/databases/$(database)/documents/staff_users/$(request.auth.uid))
+        && staffDoc().active != false;
+    }
+
+    function isSuperAdmin() {
+      return isActiveStaff() && staffDoc().role == 'super_admin';
+    }
+
+    function hasPerm(perm) {
+      return isSuperAdmin() || (
+        isActiveStaff()
+        && staffDoc().customPermissions != null
+        && perm in staffDoc().customPermissions
+      );
+    }
+
+    // Perfiles de equipo: cada usuario activo puede leer su propio perfil; solo Super Admin gestiona otros.
+    match /staff_users/{uid} {
+      allow read: if isSignedIn() && (request.auth.uid == uid || isSuperAdmin());
+      allow write: if isSuperAdmin();
+    }
+
+    // Catálogos estandarizados: lectura para todo el equipo activo; escritura para Super Admin o permiso manage_catalogs.
+    match /catalog_oils/{id} {
+      allow read: if isActiveStaff();
+      allow write: if hasPerm('manage_catalogs');
+    }
+
+    match /catalog_parts/{id} {
+      allow read: if isActiveStaff();
+      allow write: if hasPerm('manage_catalogs');
+    }
+
+    // Vehículos públicos (visibles por chip NFC): lectura pública, escritura controlada por roles.
+    match /vehicles/{vehicleId} {
+      allow read: if true;
+      allow create: if hasPerm('create_vehicle');
+      allow update: if hasPerm('edit_vehicle') || hasPerm('add_service');
+      allow delete: if hasPerm('delete_vehicle');
+
+      match /services/{serviceId} {
+        allow read: if true;
+        allow create: if hasPerm('add_service');
+        allow update: if hasPerm('edit_service');
+        allow delete: if hasPerm('delete_service');
+      }
+
+      match /checklists/{checklistId} {
+        allow read: if true;
+        allow create: if hasPerm('add_service') || hasPerm('fill_checklist');
+        allow update: if hasPerm('edit_service');
+        allow delete: if hasPerm('delete_service');
+      }
+    }
+
+    // Datos privados del cliente e importes: protegidos según permisos RBAC.
+    match /vehicles_private/{vehicleId} {
+      allow read: if hasPerm('view_client_private') || hasPerm('view_prices');
+      allow create: if hasPerm('create_vehicle');
+      allow update: if hasPerm('edit_vehicle');
+      allow delete: if hasPerm('delete_vehicle');
+
+      match /services/{serviceId} {
+        allow read: if hasPerm('view_prices');
+        allow create: if hasPerm('add_service');
+        allow update: if hasPerm('edit_service');
+        allow delete: if hasPerm('delete_service');
+      }
+    }
+
+    // Registro de avisos automáticos: solo Super Admin / lectura desde dashboard.
+    match /reminders_log/{id} {
+      allow read: if hasPerm('view_dashboard');
+      allow write: if isSuperAdmin();
+    }
+  }
+}

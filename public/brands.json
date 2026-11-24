@@ -1,0 +1,318 @@
+[
+    {
+      "id": 1,
+      "brand_name": "Abarth"
+    },
+    {
+      "id": 2,
+      "brand_name": "Alfa Romeo"
+    },
+    {
+      "id": 3,
+      "brand_name": "Aro"
+    },
+    {
+      "id": 4,
+      "brand_name": "Asia"
+    },
+    {
+      "id": 5,
+      "brand_name": "Asia Motors"
+    },
+    {
+      "id": 6,
+      "brand_name": "Aston Martin"
+    },
+    {
+      "id": 7,
+      "brand_name": "Audi"
+    },
+    {
+      "id": 8,
+      "brand_name": "Austin"
+    },
+    {
+      "id": 9,
+      "brand_name": "Auverland"
+    },
+    {
+      "id": 10,
+      "brand_name": "Bentley"
+    },
+    {
+      "id": 11,
+      "brand_name": "Bertone"
+    },
+    {
+      "id": 12,
+      "brand_name": "Bmw"
+    },
+    {
+      "id": 13,
+      "brand_name": "Cadillac"
+    },
+    {
+      "id": 14,
+      "brand_name": "Chevrolet"
+    },
+    {
+      "id": 15,
+      "brand_name": "Chrysler"
+    },
+    {
+      "id": 16,
+      "brand_name": "Citroen"
+    },
+    {
+      "id": 17,
+      "brand_name": "Corvette"
+    },
+    {
+      "id": 18,
+      "brand_name": "Dacia"
+    },
+    {
+      "id": 19,
+      "brand_name": "Daewoo"
+    },
+    {
+      "id": 20,
+      "brand_name": "Daf"
+    },
+    {
+      "id": 21,
+      "brand_name": "Daihatsu"
+    },
+    {
+      "id": 22,
+      "brand_name": "Daimler"
+    },
+    {
+      "id": 23,
+      "brand_name": "Dodge"
+    },
+    {
+      "id": 24,
+      "brand_name": "Ferrari"
+    },
+    {
+      "id": 25,
+      "brand_name": "Fiat"
+    },
+    {
+      "id": 26,
+      "brand_name": "Ford"
+    },
+    {
+      "id": 27,
+      "brand_name": "Galloper"
+    },
+    {
+      "id": 28,
+      "brand_name": "Gmc"
+    },
+    {
+      "id": 29,
+      "brand_name": "Honda"
+    },
+    {
+      "id": 30,
+      "brand_name": "Hummer"
+    },
+    {
+      "id": 31,
+      "brand_name": "Hyundai"
+    },
+    {
+      "id": 32,
+      "brand_name": "Infiniti"
+    },
+    {
+      "id": 33,
+      "brand_name": "Innocenti"
+    },
+    {
+      "id": 34,
+      "brand_name": "Isuzu"
+    },
+    {
+      "id": 35,
+      "brand_name": "Iveco"
+    },
+    {
+      "id": 36,
+      "brand_name": "Iveco-pegaso"
+    },
+    {
+      "id": 37,
+      "brand_name": "Jaguar"
+    },
+    {
+      "id": 38,
+      "brand_name": "Jeep"
+    },
+    {
+      "id": 39,
+      "brand_name": "Kia"
+    },
+    {
+      "id": 40,
+      "brand_name": "Lada"
+    },
+    {
+      "id": 41,
+      "brand_name": "Lamborghini"
+    },
+    {
+      "id": 42,
+      "brand_name": "Lancia"
+    },
+    {
+      "id": 43,
+      "brand_name": "Land-rover"
+    },
+    {
+      "id": 44,
+      "brand_name": "Ldv"
+    },
+    {
+      "id": 45,
+      "brand_name": "Lexus"
+    },
+    {
+      "id": 46,
+      "brand_name": "Lotus"
+    },
+    {
+      "id": 47,
+      "brand_name": "Mahindra"
+    },
+    {
+      "id": 48,
+      "brand_name": "Maserati"
+    },
+    {
+      "id": 49,
+      "brand_name": "Maybach"
+    },
+    {
+      "id": 50,
+      "brand_name": "Mazda"
+    },
+    {
+      "id": 51,
+      "brand_name": "Mercedes-benz"
+    },
+    {
+      "id": 52,
+      "brand_name": "Mg"
+    },
+    {
+      "id": 53,
+      "brand_name": "Mini"
+    },
+    {
+      "id": 54,
+      "brand_name": "Mitsubishi"
+    },
+    {
+      "id": 55,
+      "brand_name": "Morgan"
+    },
+    {
+      "id": 56,
+      "brand_name": "Nissan"
+    },
+    {
+      "id": 57,
+      "brand_name": "Opel"
+    },
+    {
+      "id": 58,
+      "brand_name": "Peugeot"
+    },
+    {
+      "id": 59,
+      "brand_name": "Pontiac"
+    },
+    {
+      "id": 60,
+      "brand_name": "Porsche"
+    },
+    {
+      "id": 61,
+      "brand_name": "Renault"
+    },
+    {
+      "id": 62,
+      "brand_name": "Rolls-royce"
+    },
+    {
+      "id": 63,
+      "brand_name": "Rover"
+    },
+    {
+      "id": 64,
+      "brand_name": "Saab"
+    },
+    {
+      "id": 65,
+      "brand_name": "Santana"
+    },
+    {
+      "id": 66,
+      "brand_name": "Seat"
+    },
+    {
+      "id": 67,
+      "brand_name": "Skoda"
+    },
+    {
+      "id": 68,
+      "brand_name": "Smart"
+    },
+    {
+      "id": 69,
+      "brand_name": "Ssangyong"
+    },
+    {
+      "id": 70,
+      "brand_name": "Subaru"
+    },
+    {
+      "id": 71,
+      "brand_name": "Suzuki"
+    },
+    {
+      "id": 72,
+      "brand_name": "Talbot"
+    },
+    {
+      "id": 73,
+      "brand_name": "Tata"
+    },
+    {
+      "id": 74,
+      "brand_name": "Toyota"
+    },
+    {
+      "id": 75,
+      "brand_name": "Umm"
+    },
+    {
+      "id": 76,
+      "brand_name": "Vaz"
+    },
+    {
+      "id": 77,
+      "brand_name": "Volkswagen"
+    },
+    {
+      "id": 78,
+      "brand_name": "Volvo"
+    },
+    {
+      "id": 79,
+      "brand_name": "Wartburg"
+    }
+  ]

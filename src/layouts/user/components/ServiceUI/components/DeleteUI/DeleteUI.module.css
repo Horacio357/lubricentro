@@ -1,0 +1,28 @@
+.container{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+.deleteButton{
+    height: 40px;
+    width: 150px;
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    color: #fff;
+    font-size: 0.9em;
+    background-color: var(--danger);
+    border-radius: 10px;
+}
+.feedbackSpan{
+    display: block;
+    margin-top: 20px;
+    height: 40px;
+    font-size: 0.9em;
+    width: 100%;
+    text-align: center;
+}

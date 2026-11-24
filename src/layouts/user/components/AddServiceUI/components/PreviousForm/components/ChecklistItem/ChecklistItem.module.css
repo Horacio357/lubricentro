@@ -1,0 +1,46 @@
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 1.05em;
+}
+.checkboxContainer{
+	display: flex;
+	gap: 15px;
+}
+/* Caja personalizada */
+.customCheckbox {
+	border: none;
+	background: none;
+	color: #fff;
+	padding: 0;
+	margin: 0;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  min-height: 28px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 21px;
+}
+
+/* Cuando está marcado */
+.checked {
+  background-color: #e53935;
+  border-color: #e53935;
+}
+
+/* X centrada */
+.checkmark {
+  color: white;
+  font-size: 18px;
+}

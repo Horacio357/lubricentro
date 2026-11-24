@@ -1,0 +1,192 @@
+.container{
+    width: 100%;
+    min-height: 90vh;
+    box-sizing: border-box;
+    padding: 20px 16px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.logo{
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 18px;
+    margin-top: 12px;
+}
+.headerMeta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+.title{
+    font-size: 1.15em;
+    margin: 0;
+    text-align: center;
+}
+.rolePill{
+    font-size: 0.78em;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background-color: rgba(252, 189, 0, 0.14);
+    border: 1px solid rgba(252, 189, 0, 0.4);
+    color: var(--mainColor);
+}
+.navWrapper{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.panelTabs{
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+.panelTab{
+    border: 1px solid var(--surfaceBorder, #363636);
+    background-color: var(--surface, #1d1d1d);
+    color: var(--textSecondary, #b3b3b3);
+    padding: 9px 16px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+}
+.panelTab:hover{
+    border-color: var(--mainColor);
+    color: #fff;
+}
+.panelTab:active{
+    transform: scale(0.97);
+}
+.panelTabActive{
+    background-color: var(--mainColor);
+    border-color: var(--mainColor);
+    color: #000;
+    font-weight: 700;
+}
+.panelTabActive:hover{
+    color: #000;
+}
+.elementContainer{
+    box-sizing: border-box;
+    padding: 7px 0;
+}
+.forgotButton{
+    font-size: 0.9em;
+    display: block;
+    margin: 15px;
+    text-align: center;
+}
+.feedbackBox{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.userTicket{
+    background-color: var(--light);
+    color: var(--dark);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border-radius: 13px;
+    word-break: break-all
+}
+.copyButton{
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    height: 40px;
+    font-size: 1em;
+    background-color: var(--mainColor);
+    margin-bottom: 30px ;
+    border-radius: 15px;
+    transition: background-color 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+    cursor: pointer;
+}
+.copyButton:active{
+    filter: brightness(0.6);
+    transform: translateY(2px);
+}
+.userTicket h3 {
+    margin: 12px 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+.userTicketTitle{
+    margin: 10px 0;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+}
+.errorMessage{
+    display: block;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    max-width: 460px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.panelContainer{
+    width: 100%;
+    max-width: 480px;
+    box-sizing: border-box;
+    padding: 16px 0;
+    transition: max-width 0.25s ease;
+}
+.panelContainerWide{
+    max-width: 1200px;
+}
+.panelSelector {
+    border: none;
+    max-width: 480px;
+    box-sizing: border-box;
+    outline: none;
+    background: none;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+    border: 2px solid rgb(37, 37, 37);
+    background-color: rgb(46, 46, 46);
+    color: rgb(255, 255, 255);
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='292.362' height='292.362'%3E%3Cpath fill='%23fff' d='M287 69.245L166.878 189.367c-5.857 5.857-15.355 5.857-21.213 0L5.364 69.245C-1.788 62.093 3.27 50 13.05 50h266.262c9.78 0 14.838 12.093 7.688 19.245z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    min-height: 42px;
+    padding-left: 12px;
+  }
+.panelSelector option {
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 28px 32px;
+        padding-bottom: 100px;
+    }
+
+    .panelSelector {
+        display: none;
+    }
+
+    .panelTabs {
+        display: flex;
+    }
+}

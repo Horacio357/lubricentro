@@ -1,0 +1,145 @@
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--surfaceBorder, #363636);
+  background-color: rgba(0, 0, 0, 0.25);
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionTitle {
+  font-size: 0.85em;
+  color: var(--mainColor, #FCBD00);
+  font-weight: 700;
+}
+
+.pickerRow,
+.customRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.select,
+.input,
+.inputSmall,
+.qtyInput,
+.priceInput {
+  box-sizing: border-box;
+  border-radius: 7px;
+  height: 36px;
+  padding: 6px 10px;
+  border: 2px solid rgb(54, 54, 54);
+  background-color: rgb(29, 29, 29);
+  color: #fff;
+  font-size: 0.86em;
+  outline: none;
+}
+
+.select,
+.input {
+  flex: 1;
+  min-width: 0;
+}
+
+.inputSmall {
+  width: 96px;
+}
+
+.addBtn {
+  border: none;
+  border-radius: 7px;
+  height: 36px;
+  padding: 0 12px;
+  background-color: var(--mainColor, #FCBD00);
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.addBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.partItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.partNameWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.partName {
+  font-size: 0.86em;
+}
+
+.partSku {
+  font-size: 0.72em;
+  color: #b3b3b3;
+}
+
+.partControls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qtyInput {
+  width: 56px;
+  text-align: center;
+}
+
+.priceInput {
+  flex: 1;
+  min-width: 80px;
+}
+
+.removeBtn {
+  border: 1px solid rgba(206, 38, 38, 0.5);
+  background: transparent;
+  color: #ff9c9c;
+  border-radius: 7px;
+  width: 32px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.totalBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--surfaceBorder, #363636);
+  font-size: 0.85em;
+}
+
+.applyBtn {
+  border: 1px solid var(--mainColor, #FCBD00);
+  background: transparent;
+  color: var(--mainColor, #FCBD00);
+  border-radius: 7px;
+  padding: 5px 10px;
+  font-size: 0.85em;
+  cursor: pointer;
+}
