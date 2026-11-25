@@ -2,13 +2,13 @@
 
 export const getServerSideProps = async () => {
 	return {
-	  redirect: {
-		destination: 'https://rudyservices.com.ar',
-		permanent: false, // ponelo en true si querés que sea una redirección 301
-	  },
+		redirect: {
+			destination: '/admin',
+			permanent: false,
+		},
 	};
-  };
-  
-  export default function Home() {
-	return null; // Nunca se renderiza porque se redirige antes
-  }
+};
+
+export default function Home() {
+	return null;
+}
